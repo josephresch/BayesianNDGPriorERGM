@@ -117,7 +117,8 @@ cross-checks passing.
 ## References
 
 Resch, J. and Handcock, M. S. (2026). Non-degeneracy priors for
-exponential-family random graph models. *Bayesian Analysis*, to appear.
+exponential-family random graph models. Submitted.
+Replication material: https://github.com/josephresch/NondegeneracyPriorERGM
 
 Stoehr, J., Benson, A. and Friel, N. (2019). Noisy Hamiltonian Monte Carlo for
 doubly intractable distributions. *Journal of Computational and Graphical
