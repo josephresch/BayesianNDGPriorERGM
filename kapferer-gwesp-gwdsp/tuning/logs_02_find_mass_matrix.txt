@@ -1,0 +1,31 @@
+Using MAP: (-1.6108722642629900, 0.6626369583687600, -0.1886951948627180)
+Simulated 500 networks at MAP (seed=20398)
+
+Mass matrix (3x3):
+                    edges gwesp.fixed.0.25 gwdsp.fixed.0.25
+edges            1216.007         1865.081         4845.487
+gwesp.fixed.0.25 1865.081         2886.529         7414.618
+gwdsp.fixed.0.25 4845.487         7414.618        20077.955
+
+Mass matrix for C (row-major, paste into hmc.c M[MAXSTATS*MAXSTATS]):
+  1216.006849699398572, 1865.081165436773972, 4845.486883567362383,
+  1865.081165436773972, 2886.529283705796843, 7414.617605358649598,
+  4845.486883567362383, 7414.617605358649598, 20077.955452080885152
+
+Inverse mass matrix (for diagnostics):
+                        edges gwesp.fixed.0.25 gwdsp.fixed.0.25
+edges             0.124658422     -0.063586993     -0.006602142
+gwesp.fixed.0.25 -0.063586993      0.039174791      0.000878767
+gwdsp.fixed.0.25 -0.006602142      0.000878767      0.001318604
+
+Proposal covariance (row-major, paste into exchange_driver.c / noisy_driver.c covprop[9]):
+  0.235371721509429, -0.120060721670132, -0.012465723879432,
+  -0.120060721670132, 0.073967229405778, 0.001659229237363,
+  -0.012465723879432, 0.001659229237363, 0.002489699944296
+
+Groundtruth proposal covariance diagonal (paste into exchange_groundtruth_driver.c):
+  0.007791151363431, 0.0, 0.0,
+  0.0, 0.002448424460417, 0.0,
+  0.0, 0.0, 0.000082412742666
+
+Wrote mass_kapferer.{rds,csv} and covprop_kapferer.{rds,csv}

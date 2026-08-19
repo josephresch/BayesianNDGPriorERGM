@@ -1,0 +1,21 @@
+Package: RcppERGM
+Type: Package
+Title: 'Rcpp' Integration for RDS sampling
+Version: 0.6-0
+Date: 2024-09-06
+Authors@R: c(
+    person("Mark S.", "Handcock", role=c("aut","cre","cph"), email="handcock@stat.ucla.edu", comment=c(ORCID="0000-0002-9985-2785"))
+    )
+Maintainer: Mark S. Handcock <handcock@stat.ucla.edu>
+Description: Some routines to construct structured populations from which respondent-driven samples can be draw written in 'Rcpp'.
+License: GPL (>= 2)
+Copyright: See file COPYRIGHTS
+URL: https://hpmrg.org
+Imports: Rcpp
+LinkingTo: Rcpp, RcppEigen
+Suggests: knitr, rmarkdown, prettydoc, mvtnorm, RcppEigen
+RoxygenNote: 7.3.2
+NeedsCompilation: yes
+Packaged: 2024-09-28 00:48:30 UTC; handcock
+Author: Mark S. Handcock [aut, cre, cph]
+    (<https://orcid.org/0000-0002-9985-2785>)
