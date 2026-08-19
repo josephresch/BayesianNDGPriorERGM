@@ -80,7 +80,9 @@ three figures above are diagnostics that did not make it into the paper.
 
 ## Sampler
 
-Adapted from Stoehr, Benson and Friel (2019). The prior module and the hull
+Adapted from Stoehr, Benson and Friel (2019), whose implementation is written
+in C against GSL; this code stays in C. `hmc.c`, `hmc_driver.c` and
+`graph_2410.c` are theirs with modifications. The prior module and the hull
 code were added for this paper. Identical to the sampler in
 `kapferer-gwesp-gwdsp/` apart from the change statistics and the compiled
 mass matrix.

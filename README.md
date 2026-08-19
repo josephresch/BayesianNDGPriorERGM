@@ -25,8 +25,10 @@ substitutes the two-star count, and there the prior changes the answer.
 
 ## NoisyHMC Sampler
 
-The sampler follows Stoehr, Benson and Friel (2019). The C source in each
-`src/` is derived from theirs. The prior module and the hull code are new.
+The sampler follows Stoehr, Benson and Friel (2019), whose implementation is
+written in C against GSL. Each `src/` starts from that code and stays in C.
+`hmc.c`, `hmc_driver.c` and `graph_2410.c` are theirs with modifications;
+`prior.c` and the hull code were written for this paper in the same language.
 
 | Paper | Code |
 |---|---|

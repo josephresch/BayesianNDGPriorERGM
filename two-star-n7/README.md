@@ -86,7 +86,9 @@ The battery is self-contained: it generates its own pool and does not read
 
 ## Sampler
 
-Adapted from Stoehr, Benson and Friel (2019). The prior module and the hull
+Adapted from Stoehr, Benson and Friel (2019), whose implementation is written
+in C against GSL; this code stays in C. `hmc.c`, `hmc_driver.c` and
+`graph_2410.c` are theirs with modifications. The prior module and the hull
 code were added for this paper.
 
     hmc.c          noisy leapfrog gradient and the leapfrog estimator of Z ratios
