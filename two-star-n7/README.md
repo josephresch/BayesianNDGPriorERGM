@@ -104,7 +104,7 @@ Values from 01 and 02, already in `hmc.c`:
                   108.351743486973660, 492.502589178357425 }
     MPLE         (-3.0385268905675438, 0.6771034983042240)
 
-Priors: `normal` is N(0, diag(10)) per dimension, `uniform` is
+Priors: `normal` is N(0, diag(100)) per dimension, `uniform` is
 [-4, 2] x [-0.05, 1], `ndg` takes strength p through `ndg_p` and the warm-start
 pool through `ndg_file`.
 

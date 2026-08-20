@@ -157,9 +157,12 @@ int main(int nargs, char **args)
 
 	if(strcmp(prior_type, "normal") == 0)
 	{
-		/* N(0, diag(10)) -- variance = 10 per dimension */
-		prior = prior_create_normal(0.0, 0.0, 10.0, 10.0);
-		fprintf(stdout, "Prior: Normal(0, diag(10))\n");
+		/* N(0, diag(100)) -- variance = 100 per dimension. Matches the
+		   prior_sd = c(10, 10) used by 01_find_map.R and
+		   02_find_mass_matrix.R, and the Caimo-Friel default used by the
+		   two Kapferer studies. */
+		prior = prior_create_normal(0.0, 0.0, 100.0, 100.0);
+		fprintf(stdout, "Prior: Normal(0, diag(100))\n");
 	}
 	else if(strcmp(prior_type, "uniform") == 0)
 	{
