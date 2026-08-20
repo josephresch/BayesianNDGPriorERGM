@@ -2,11 +2,11 @@
 # Compute the HMC mass matrix at the MAP for the Kapferer/esg model.
 #
 # Mass is the observed Fisher information of the log posterior at the MAP:
-#   mass = cov_theta[s(Y)] + <prior second-derivative correction>
-# where the ERGM covariance is estimated by Monte Carlo simulation at the MAP,
-# and the prior correction is taken from ergm_helpers::get_priorgrad2
-# (same sign convention as the original g7 pipeline — negligible here since
-# prior_sd = 10 makes the correction O(1e-2) vs ERGM stat variance).
+#   mass = cov_theta[s(Y)] - grad^2 log p(theta)
+# where the ERGM covariance is estimated by Monte Carlo simulation at the MAP
+# and the diagonal prior Hessian comes from ergm_helpers::get_priorgrad2. With
+# prior_sd = 10 the prior term is O(1e-2) against ERGM stat variances of
+# O(1e3), so it barely moves the result.
 #
 # The mass matrix is printed as a row-major 9-value block so it can be pasted
 # into hmc.c as the `M[MAXSTATS*MAXSTATS]` literal.
@@ -48,7 +48,7 @@ networks = ergm::simulate_formula(sim_form, coef = mapcoef,
 cat(sprintf("Simulated %d networks at MAP (seed=%d)\n", nsim, seed))
 
 # ----- mass matrix -----
-mass = cov(networks) + get_priorgrad2(mapcoef, prior_mean, prior_sd)
+mass = cov(networks) - diag(get_priorgrad2(mapcoef, prior_mean, prior_sd))
 
 cat("\nMass matrix (3x3):\n")
 print(mass)

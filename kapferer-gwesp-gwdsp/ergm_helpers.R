@@ -18,9 +18,7 @@ get_priorgrad = function(theta, prior_mean, prior_sd)
   return(-(theta - prior_mean) / prior_var)
 }
 
-# Hessian of log Normal prior — diagonal, element-wise 1/var with a sign
-# convention matching the original g7 pipeline (used additively on the
-# ERGM stat covariance when forming the mass matrix).
+# Hessian of the log Normal prior: diagonal, -1/var per dimension.
 get_priorgrad2 = function(theta, prior_mean, prior_sd)
 {
   prior_var = prior_sd * prior_sd

@@ -35,7 +35,7 @@
   networks = simulate(g7_net ~ edges + kstar(2), coef=mapcoef, nsim=500, statsonly=TRUE)
 
 # Calculate mass matrix from these networks and prior (gaussian)
-  mass = cov(networks) + get_priorgrad2(mapcoef, priormean, priorsd)
+  mass = cov(networks) - diag(get_priorgrad2(mapcoef, priormean, priorsd))
   cat("Mass matrix:\n")
   print(mass)
   cat("\nMass matrix for C (flat array, row-major):\n")
