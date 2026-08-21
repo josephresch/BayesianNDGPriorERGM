@@ -1,13 +1,13 @@
 # Bayesian Inference for ERGMs with Non-degeneracy Priors
 
-Code and data for Resch and Handcock, *Bayesian Inference for
+Code and data for *Bayesian Inference for
 Exponential-Family Random Graph Models with Non-degeneracy Priors*.
 
 The paper develops a noisy Hamiltonian Monte Carlo sampler for the ERGM
 posterior under the non-degeneracy prior, approximates that prior by importance
 reweighting the auxiliary networks the sampler already draws, and evaluates the
 result on two networks. The propriety and moment theory for the prior is in the
-companion paper, Resch and Handcock (2026).
+companion paper, *Non-degeneracy Priors for Exponential-family Random Graph Models*.
 
 Every directory corresponds to one study in the paper.
 
@@ -118,7 +118,7 @@ cross-checks passing.
 
 ## References
 
-Resch, J. and Handcock, M. S. (2026). Non-degeneracy priors for
+Non-degeneracy priors for
 exponential-family random graph models. Submitted.
 Replication material: https://github.com/josephresch/NondegeneracyPriorERGM
 
